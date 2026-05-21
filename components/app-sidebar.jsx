@@ -4,7 +4,6 @@ import * as React from "react";
 
 import IconLopes from "./iconLopes";
 
-import { NavDocuments } from "@/components/nav-documents";
 import { NavMain } from "@/components/nav-main";
 import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
@@ -13,27 +12,19 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import {
   LayoutDashboardIcon,
-  ListIcon,
-  ChartBarIcon,
-  FolderIcon,
+  WalletIcon,
+  ReceiptIcon,
+  TrendingUpIcon,
+  PieChartIcon,
+  TargetIcon,
   UsersIcon,
-  CameraIcon,
-  FileTextIcon,
-  Settings2Icon,
-  CircleHelpIcon,
-  SearchIcon,
-  DatabaseIcon,
-  FileChartColumnIcon,
-  FileIcon,
-  CommandIcon,
+  SettingsIcon,
+  HelpCircleIcon,
 } from "lucide-react";
-import Image from "next/image";
+
 import { Separator } from "./ui/separator";
 
 const data = {
@@ -44,111 +35,51 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
+      title: "Visão Geral",
       url: "#",
       icon: <LayoutDashboardIcon />,
     },
     {
-      title: "Lifecycle",
+      title: "Recebimento",
       url: "#",
-      icon: <ListIcon />,
+      icon: <WalletIcon />,
     },
     {
-      title: "Analytics",
+      title: "Dívida",
       url: "#",
-      icon: <ChartBarIcon />,
+      icon: <ReceiptIcon />,
     },
     {
-      title: "Projects",
+      title: "Fluxo de caixa",
       url: "#",
-      icon: <FolderIcon />,
+      icon: <TrendingUpIcon />,
     },
     {
-      title: "Team",
+      title: "Receitas",
+      url: "#",
+      icon: <PieChartIcon />,
+    },
+    {
+      title: "Metas",
+      url: "#",
+      icon: <TargetIcon />,
+    },
+    {
+      title: "Clientes",
       url: "#",
       icon: <UsersIcon />,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: <CameraIcon />,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: <FileTextIcon />,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: <FileTextIcon />,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
     },
   ],
   navSecondary: [
     {
       title: "Settings",
       url: "#",
-      icon: <Settings2Icon />,
+      icon: <SettingsIcon />,
     },
     {
       title: "Get Help",
       url: "#",
-      icon: <CircleHelpIcon />,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: <SearchIcon />,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: <DatabaseIcon />,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: <FileChartColumnIcon />,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: <FileIcon />,
+      icon: <HelpCircleIcon />,
     },
   ],
 };
@@ -165,9 +96,8 @@ export function AppSidebar({ ...props }) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <Separator />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <Separator className="mt-auto" />
+        <NavSecondary items={data.navSecondary} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
