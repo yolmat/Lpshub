@@ -36,7 +36,7 @@ const data = {
   navMain: [
     {
       title: "Visão Geral",
-      url: "#",
+      url: "home",
       icon: <LayoutDashboardIcon />,
     },
     {
