@@ -32,7 +32,7 @@ export function SiteHeader() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-3 px-5">
         <ComboxboxInputGroup />
         <ModeToggle />
       </div>
