@@ -1,5 +1,7 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
-import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+
+import "@/app/globals.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,13 +12,22 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="pt-br"
+      suppressHydrationWarning
       className={`h-full antialiased`}
     >
 
       <body className="min-h-full flex flex-col">
-        <TooltipProvider>
-          {children}
-        </TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+
+        >
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

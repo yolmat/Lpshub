@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import getDate from "@/lib/getDate";
 import { ComboxboxInputGroup } from "./combox-group";
+import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   const horaAtual = getDate();
@@ -31,8 +32,9 @@ export function SiteHeader() {
           </h1>
         </div>
       </div>
-      <div>
+      <div className="flex flex-row gap-3">
         <ComboxboxInputGroup />
+        <ModeToggle />
       </div>
     </header>
   );
