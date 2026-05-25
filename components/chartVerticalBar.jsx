@@ -36,7 +36,7 @@ const chartConfig = {
 
 export default function ChartVerticalBar() {
   return (
-    <Card className="@container/card p-5">
+    <Card className="@container/card p-5 w-full col-span-2">
       <CardHeader>
         <CardTitle>Recebimentos por mês</CardTitle>
         <CardDescription>
