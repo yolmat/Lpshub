@@ -55,7 +55,7 @@ const chartConfig = {
 
 export function ChartPieLegend() {
   return (
-    <Card className="flex flex-col w-full">
+    <Card className="flex flex-col w-full col-span-2 @5xl/main:col-span-1">
       <CardHeader className="items-center pb-0">
         <CardTitle>Composição de receitas</CardTitle>
         <CardDescription>Distribuição por categoria</CardDescription>
