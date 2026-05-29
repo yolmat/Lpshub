@@ -7,10 +7,8 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "./ui/card";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart";
-import { TrendingUp } from "lucide-react";
 
 export const description = "A bar chart";
 const chartData = [

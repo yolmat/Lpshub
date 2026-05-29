@@ -5,6 +5,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 import ChartVerticalBar from "@/components/chartVerticalBar";
 import { ChartPieLegend } from "@/components/chartPieLegend";
+import { ChartHorizontalBar } from "@/components/chartHorizontalBar";
 
 export default function Page() {
   return (
@@ -25,6 +26,11 @@ export default function Page() {
                 <div className="grid grid-cols-1 gap-4 @xl/main:grid-cols-2 @5xl/main:grid-cols-3">
                   <ChartVerticalBar />
                   <ChartPieLegend />
+                </div>
+              </div>
+              <div className="px-4 lg:px-6">
+                <div className="flex flex-row gap-4 justify-center items-center">
+                  <ChartHorizontalBar />
                 </div>
               </div>
               <div className="px-4 lg:px-6"></div>
