@@ -30,7 +30,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="px-4 lg:px-6">
-                <div className="flex flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col @5xl/main:flex-row gap-4 justify-center items-center">
                   <ChartHorizontalBar />
                   <ChartLineDots />
                 </div>

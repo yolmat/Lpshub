@@ -39,10 +39,10 @@ export function ChartLineDots() {
   return (
     <Card className="w-full @container/card">
       <CardHeader>
-        <CardTitle>Line Chart - Custom Dots</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Evolução do saldo líquido</CardTitle>
+        <CardDescription>Crescimento ao longo do ano</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer config={chartConfig} className="h-[250px] w-full">
           <LineChart
             accessibilityLayer

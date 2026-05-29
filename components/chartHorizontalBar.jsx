@@ -46,7 +46,7 @@ export function ChartHorizontalBar() {
         <CardTitle>Recebido x Devido</CardTitle>
         <CardDescription>Comparativo dos ultimos 6 meses</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer config={chartConfig} className="h-[250px] w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
@@ -58,8 +58,8 @@ export function ChartHorizontalBar() {
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Bar dataKey="received" fill="var(--color-primary)" radius={4} />
-            <Bar dataKey="debt" fill="var(--color-accent-soft)" radius={4} />
+            <Bar dataKey="received" fill="var(--color-primary)" radius={8} />
+            <Bar dataKey="debt" fill="var(--color-accent-soft)" radius={8} />
           </BarChart>
         </ChartContainer>
       </CardContent>
