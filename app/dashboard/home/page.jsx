@@ -6,6 +6,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import ChartVerticalBar from "@/components/chartVerticalBar";
 import { ChartPieLegend } from "@/components/chartPieLegend";
 import { ChartHorizontalBar } from "@/components/chartHorizontalBar";
+import { ChartLineDots } from "@/components/chartLineDots";
 
 export default function Page() {
   return (
@@ -31,6 +32,7 @@ export default function Page() {
               <div className="px-4 lg:px-6">
                 <div className="flex flex-row gap-4 justify-center items-center">
                   <ChartHorizontalBar />
+                  <ChartLineDots />
                 </div>
               </div>
               <div className="px-4 lg:px-6"></div>
