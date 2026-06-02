@@ -7,6 +7,7 @@ import ChartVerticalBar from "@/components/chartVerticalBar";
 import { ChartPieLegend } from "@/components/chartPieLegend";
 import { ChartHorizontalBar } from "@/components/chartHorizontalBar";
 import { ChartLineDots } from "@/components/chartLineDots";
+import { FinancialTarget } from "@/components/financialTarget";
 
 export default function Page() {
   return (
@@ -35,7 +36,11 @@ export default function Page() {
                   <ChartLineDots />
                 </div>
               </div>
-              <div className="px-4 lg:px-6"></div>
+              <div className="px-4 lg:px-6">
+                <div className="grid grid-cols-1 gap-4 @xl/main:grid-cols-2 @5xl/main:grid-cols-2">
+                  <FinancialTarget />
+                </div>
+              </div>
             </div>
           </div>
         </div>
